@@ -8,7 +8,8 @@ Updates/Data Freshness
 
 This site is updated at the beginning of the month under the following parameters:
 
-* All tests are run at the same time a webpagetest.org
+* Tests are run against the institution’s homepage.
+* All tests are run at the same time a webpagetest.org.
 * "Start render" and "fully loaded" values are taken on the first pass of the test.
 * Schools that skew the charts too much are omitted from the test.
 
