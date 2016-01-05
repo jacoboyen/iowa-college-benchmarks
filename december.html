@@ -1,0 +1,278 @@
+
+<html>
+  <head>
+    <script type="text/javascript"
+          src="http://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart']
+            }]
+          }"></script>
+
+    <script type="text/javascript">
+		google.setOnLoadCallback(drawSeriesChart);
+
+
+	  function drawSeriesChart() {
+
+      var data = google.visualization.arrayToDataTable([
+		['ID', 'Start Render (sec.)', 'Fully Loaded (sec.)', 'School Type', 'Page Size (Mb)'],
+
+		//Benchmark
+    ['Albion College', 9.646, 9.858, 'Benchmark' , 1.035],
+    //['Beloit College', 49.129, 65.686, 'Benchmark' , 20.636],
+    ['Bethel University', 3.335, 4.872, 'Benchmark' , 0.453],
+    ['Gustavus Adolphus College', 6.842, 7.618, 'Benchmark' , 1.873],
+    ['Hope College', 7.678, 7.914, 'Benchmark' , 2.237],
+    ['Monmouth College', 3.915, 4.146, 'Benchmark' , 1.496],
+    ['Ripon College', 9.298, 9.391, 'Benchmark' , 4.672],
+    ['William Jewell College', 8.884, 12.385, 'Benchmark' , 2.484],
+    ['Wittenberg University', 6.554, 6.624, 'Benchmark' , 3.211],
+    ['St. Olaf College', 7.66, 7.803, 'Benchmark' , 3.539],
+
+		//['Central College', 2.545, 2.771, 'Central College' , 0.659],
+    ['Central College', 3.333, 3.435, 'Central College' , 0.707],
+
+      ]);
+	  var options = {
+        title: 'Central College vs. Benchmark Institutions',
+        hAxis: {title: 'Start Render (in seconds)'},
+        vAxis: {title: 'Load Time (in seconds)'},
+        bubble: {textStyle: {fontSize: 11}},
+		colors: ['#FFCC00','#cb2026'],
+		animation:{
+				duration: 1000,
+				startup: true,
+				easing: 'inAndOut',
+			},
+      };
+
+		// ---------------------------------------------------------------------------------- //
+		//  Iowa Conference
+
+		var data1 = google.visualization.arrayToDataTable([
+      ['ID', 'Start Render (sec.)', 'Fully Loaded (sec.)', 'School Type', 'Page Size (Mb)'],
+      //['Coe College', 15.628, 15.723, 'Iowa Conference' , 7.907],
+      ['University of Dubuque', 7.999, 8.673, 'Iowa Conference' , 2.122],
+      ['Loras College', 5.004, 6.076, 'Iowa Conference' , 2.208],
+      ['Buena Vista University', 3.224, 3.555, 'Iowa Conference' , 1.018],
+      ['Wartburg College', 6.623, 9.303, 'Iowa Conference' , 3.029],
+      ['Luther College', 9.439, 9.568, 'Iowa Conference' , 4.478],
+      ['Simpson College', 6.108, 6.28, 'Iowa Conference' , 2.015],
+
+			//['Central College', .793, 2.164, 'Central College' , 0.583],
+			//['Central College', 1.049, 2.655, 'Central College' , 0.823]
+			//['Central College', 4.62, 4.843, 'Central College' , 0.659]
+			['Central College', 3.333, 3.435, 'Central College' , 0.707]
+
+		]);
+
+		var options1 = {
+			title: 'Central College vs. Iowa Conference',
+			hAxis: {title: 'Start Render (in seconds)'},
+			vAxis: {title: 'Load Time (in seconds)'},
+			bubble: {textStyle: {fontSize: 11}},
+			colors: ['green','#cb2026'],
+			animation:{
+					duration: 1000,
+					startup: true,
+					easing: 'inAndOut',
+				},
+		};
+
+		// ---------------------------------------------------------------------------------- //
+		//  Regents Institutions
+
+		var data2 = google.visualization.arrayToDataTable([
+		['ID', 'Start Render (sec.)', 'Fully Loaded (sec.)', 'School Type', 'Page Size (Mb)'],
+		// Regents
+    ['Iowa State University', 4.161, 4.264, 'Regents' , 1.382],
+    ['University of Iowa', 5.627, 6.756, 'Regents' , 2.156],
+    //['University of Northern Iowa', 16.45, 16.786, 'Regents' , 2.99],
+
+		//['Central College', .793, 2.164, 'Central College' , .583],
+		//['Central College', 1.049, 2.655, 'Central College' , 0.823]
+		//['Central College', 4.62, 4.843, 'Central College' , 0.659],
+		//['Central College', 2.545, 2.771, 'Central College' , 0.659]
+    ['Central College', 3.333, 3.435, 'Central College' , 0.707]
+
+		]);
+
+		var options2 = {
+			title: 'Central College vs. Regents',
+			hAxis: {title: 'Start Render (in seconds)'},
+			vAxis: {title: 'Load Time (in seconds)'},
+			bubble: {textStyle: {fontSize: 11}},
+			colors: ['black','#cb2026'],
+			animation:{
+					duration: 1000,
+					startup: true,
+					easing: 'inAndOut',
+				},
+		};
+
+		// ---------------------------------------------------------------------------------- //
+		//  Everybody
+
+		var data3 = google.visualization.arrayToDataTable([
+		['ID', 'Start Render (sec.)', 'Fully Loaded (sec.)', 'School Type', 'Page Size (Mb)'],
+		// Regents
+    ['Iowa State University', 4.161, 4.264, 'Regents' , 1.382],
+    ['University of Iowa', 5.627, 6.756, 'Regents' , 2.156],
+    //['University of Northern Iowa', 16.45, 16.786, 'Regents' , 2.99],
+
+		//Iowa Conference
+    //['Coe College', 15.628, 15.723, 'Iowa Conference' , 7.907],
+    ['University of Dubuque', 7.999, 8.673, 'Iowa Conference' , 2.122],
+    ['Loras College', 5.004, 6.076, 'Iowa Conference' , 2.208],
+    ['Buena Vista University', 3.224, 3.555, 'Iowa Conference' , 1.018],
+    ['Wartburg College', 6.623, 9.303, 'Iowa Conference' , 3.029],
+    ['Luther College', 9.439, 9.568, 'Iowa Conference' , 4.478],
+    ['Simpson College', 6.108, 6.28, 'Iowa Conference' , 2.015],
+
+		//Benchmarks
+    ['Albion College', 9.646, 9.858, 'Benchmark' , 1.035],
+    //['Beloit College', 49.129, 65.686, 'Benchmark' , 20.636],
+    ['Bethel University', 3.335, 4.872, 'Benchmark' , 0.453],
+    ['Gustavus Adolphus College', 6.842, 7.618, 'Benchmark' , 1.873],
+    ['Hope College', 7.678, 7.914, 'Benchmark' , 2.237],
+    ['Monmouth College', 3.915, 4.146, 'Benchmark' , 1.496],
+    ['Ripon College', 9.298, 9.391, 'Benchmark' , 4.672],
+    ['William Jewell College', 8.884, 12.385, 'Benchmark' , 2.484],
+    ['Wittenberg University', 6.554, 6.624, 'Benchmark' , 3.211],
+    ['St. Olaf College', 7.66, 7.803, 'Benchmark' , 3.539],
+
+		//['Central College', .793, 2.164, 'Central College' , .583],
+		['Central College', 3.333, 3.435, 'Central College' , 0.707]
+		]);
+
+		var options3 = {
+			title: 'Central vs. All comparison schools',
+			hAxis: {title: 'Start Render (in seconds)'},
+			vAxis: {title: 'Load Time (in seconds)'},
+			bubble: {textStyle: {fontSize: 11}},
+			colors: ['black', 'green', '#FFCC00', '#cb2026'],
+			animation:{
+					duration: 1000,
+					startup: true,
+					easing: 'inAndOut',
+				},
+		};
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+
+	  var chart1 = new google.visualization.BubbleChart(document.getElementById('series_chart_div1'));
+      chart1.draw(data1, options1);
+
+	  var chart2 = new google.visualization.BubbleChart(document.getElementById('series_chart_div2'));
+      chart2.draw(data2, options2);
+
+	  var chart3 = new google.visualization.BubbleChart(document.getElementById('series_chart_div3'));
+      chart3.draw(data3, options3);
+    }
+    </script>
+    <style type="text/css">
+		html{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		table{
+			width: 95%;
+
+			margin: 1em;
+		}
+
+		table tr th{
+			border-top: 1px solid #990000;
+			border-bottom: 1px solid #990000;
+			color: #990000;
+		}
+
+		table tr td{
+			border: 1px solid #fff;
+			text-align:center;
+			text-transform:uppercase;
+			font-size: 2em;
+		}
+		table tr td{
+			border: 1px solid #ccc;
+		}
+		table tr td:first-child{
+			font-size: 1em;
+			text-transform:none;
+		}
+		table tr:hover td:not(:first-child){
+			opacity: .7;
+			border: 5px solid #000;
+		}
+		table tr:hover td:first-child{
+			background-color: #FF9;
+			opacity: 1 !important;
+		}
+		table tr:hover td:last-child{
+			opacity: 1 !important;
+		}
+		.A{background-color: #090; color: #fff;}
+		.B{background-color: #0C6; color: #fff;}
+		.C{background-color: #FC0;}
+		.D{ background-color:#F93;}
+		.F{background-color:#990000; color: #fff; }
+
+		#series_chart_div, #series_chart_div1, #series_chart_div2, #series_chart_div3{
+			width: 75%;
+			height: 75%;
+			margin: 1em auto;
+		}
+		.clearBoth{
+			clear:both;
+			margin-bottom: 1em;
+		}
+
+	</style>
+  </head>
+	<body>
+    	<h1>December 2015 pagespeed benchmarks</h1>
+    	<p>Note: The following schools are excluded from these charts because they skew the charts in a way that make them difficult to read.</p>
+    	<ul>
+    		<li>Beloit College</li>
+    		<li>Coe College</li>
+    		<li>University of Northern Iowa</li>
+    	</ul>
+        <div id="series_chart_div" style="border: 1px solid #000;"></div>
+        <div id="series_chart_div1" style="border: 1px solid #000;"></div>
+        <div class="clearBoth"></div>
+        <div id="series_chart_div2" style="border: 1px solid #000;"></div>
+        <div id="series_chart_div3" style="border: 1px solid #000;"></div>
+        <div class="clearBoth"></div>
+        <h2>Full speed tests</h2>
+        <p><a href="http://www.webpagetest.org/result/151202_FH_158P">Coe College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_EM_1590">Iowa State University</a><br />
+        <a href="http://www.webpagetest.org/result/151202_HP_159C">University of Iowa</a><br />
+        <a href="http://www.webpagetest.org/result/151202_4J_159J">Central College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_PR_159Q">University of Dubuque</a><br />
+        <a href="http://www.webpagetest.org/result/151202_SS_159W">Loras College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_Z7_15A2">Buena Vista University</a><br />
+        <a href="http://www.webpagetest.org/result/151202_HM_15A8">Wartburg College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_F8_15AH">University of Northern Iowa</a><br />
+        <a href="http://www.webpagetest.org/result/151202_YG_15B6">Luther College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_QH_15BF">Simpson College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_AN_15BV">Albion College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_SG_15C1">Beloit College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_7Y_15C7">Bethel University</a><br />
+        <a href="http://www.webpagetest.org/result/151202_05_15CK">Gustavus Adolphus College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_6X_15CR">Hope College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_2W_15D1">Monmouth College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_45_15D8">Ripon College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_06_15DJ">William Jewell College</a><br />
+        <a href="http://www.webpagetest.org/result/151202_SH_15DV">Wittenberg University</a><br />
+        <a href="http://www.webpagetest.org/result/151202_AG_15ED">St. Olaf College</a><br /></p>
+
+        <h2>Previous tests</h2>
+		<ul>
+        	<li><a href="october.html">October</a></li>
+          <li><a href="november.html">November</a></li>
+		</ul>
+	</body>
+</html>
