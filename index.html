@@ -1,7 +1,7 @@
 <html>
   <head>
     <script type="text/javascript"
-          src="http://www.google.com/jsapi?autoload={
+          src="https://www.google.com/jsapi?autoload={
             'modules':[{
               'name':'visualization',
               'version':'1',
@@ -19,17 +19,17 @@
 		['ID', 'Start Render (sec.)', 'Fully Loaded (sec.)', 'School Type', 'Page Size (Mb)'],
 
 		//Benchmark
-    ['Albion College', 9.608, 9.817, 'Benchmark' , 1.035],
-    //['Beloit College', 19.967, 83.755, 'Benchmark' , 20.636],
-    ['Bethel University', 1.728, 2.564, 'Benchmark' , 0.453],
-    ['Gustavus Adolphus College', 5.554, 5.786, 'Benchmark' , 1.873],
-    ['Hope College', 7.023, 7.194, 'Benchmark' , 2.237],
-    ['Monmouth College', 4.373, 4.454, 'Benchmark' , 1.496],
-    ['Ripon College', 12.528, 12.617, 'Benchmark' , 4.672],
-    ['William Jewell College', 10.525, 13.825, 'Benchmark' , 2.484],
+    ['Albion College', 4.573, 9.501, 'Benchmark' , 3.541],
+    //['Beloit College', 22.765, 46.301, 'Benchmark' , 18.011],
+    ['Bethel University', 1.577, 4.690, 'Benchmark' , 0.693],
+    ['Gustavus Adolphus College', 2.773, 13.390, 'Benchmark' , 6.3],
+    ['Hope College', 3.070, 8.461, 'Benchmark' , 2.654],
+    ['Monmouth College', 1.890, 4.286, 'Benchmark' , .930],
+    ['Ripon College', 1.894, 23.994, 'Benchmark' , 13.732],
+    ['William Jewell College', 4.187, 7.576, 'Benchmark' , .991],
     ['Wittenberg University', 7.172, 7.259, 'Benchmark' , 3.211],
-    ['St. Olaf College', 7.319, 7.484, 'Benchmark' , 3.539],
-    ['Central College', 3.974, 3.974, 'Central College' , 0.707],
+    ['St. Olaf College', 2.773, 4.259, 'Benchmark' , 1.271],
+    ['Central College', 1.863, 2.796, 'Central College' , 0.614],
 
       ]);
 	  var options = {
@@ -50,14 +50,15 @@
 
 		var data1 = google.visualization.arrayToDataTable([
       ['ID', 'Start Render (sec.)', 'Fully Loaded (sec.)', 'School Type', 'Page Size (Mb)'],
-      //['Coe College', 25.611, 25.687, 'Iowa Conference' , 7.907],
-      ['University of Dubuque', 10.644, 11.466, 'Iowa Conference' , 2.122],
-      ['Loras College', 5.452, 5.517, 'Iowa Conference' , 2.208],
-      ['Buena Vista University', 3.47, 3.825, 'Iowa Conference' , 1.018],
-      ['Wartburg College', 7.365, 9.459, 'Iowa Conference' , 3.029],
-      ['Luther College', 10.097, 10.203, 'Iowa Conference' , 4.478],
-      ['Simpson College', 7.845, 11.364, 'Iowa Conference' , 2.015],
-      ['Central College', 3.974, 3.974, 'Central College' , 0.707],
+      ['Coe College', 1.675, 17.738, 'Iowa Conference' , 7.607],
+      ['University of Dubuque', 1.582, 10.480, 'Iowa Conference' , 4.509],
+      ['Loras College', 2.862, 61.556, 'Iowa Conference' , 24.944],
+      ['Buena Vista University', 2.172, 7.202, 'Iowa Conference' , 3.301],
+      ['Wartburg College', 7.679, 49.374, 'Iowa Conference' , 10.229],
+      ['Luther College', 3.998, 10.879, 'Iowa Conference' , 5.159],
+      ['Simpson College', 3.988, 7.697, 'Iowa Conference' , 2.351],
+      ['Nebraska Wesleyan', 3.987, 12.580, 'Iowa Conference' , 1.690],
+      ['Central College', 1.863, 2.796, 'Central College' , 0.614],
 
 		]);
 
@@ -80,10 +81,10 @@
 		var data2 = google.visualization.arrayToDataTable([
 		['ID', 'Start Render (sec.)', 'Fully Loaded (sec.)', 'School Type', 'Page Size (Mb)'],
 		// Regents
-    ['Iowa State University', 4.425, 4.528, 'Regents' , 1.382],
-    ['University of Iowa', 3.835, 4.803, 'Regents' , 2.156],
-    //['University of Northern Iowa', 8.448, 17.105, 'Regents' , 2.99],
-    ['Central College', 3.974, 3.974, 'Central College' , 0.707],
+    ['Iowa State University', 1.915, 5.746, 'Regents' , 1.928],
+    ['University of Iowa', 1.585, 3.188, 'Regents' , 1.020],
+    ['University of Northern Iowa', 1.785, 10.403, 'Regents' , 5.357],
+    ['Central College', 1.863, 2.796, 'Central College' , 0.614],
 
 		]);
 
@@ -106,34 +107,35 @@
 		var data3 = google.visualization.arrayToDataTable([
 		['ID', 'Start Render (sec.)', 'Fully Loaded (sec.)', 'School Type', 'Page Size (Mb)'],
 		// Regents
-    ['Iowa State University', 4.425, 4.528, 'Regents' , 1.382],
-    ['University of Iowa', 3.835, 4.803, 'Regents' , 2.156],
-    ['University of Northern Iowa', 8.448, 17.105, 'Regents' , 2.99],
+    ['Iowa State University', 1.915, 5.746, 'Regents' , 1.928],
+    ['University of Iowa', 1.585, 3.188, 'Regents' , 1.020],
+    ['University of Northern Iowa', 1.785, 10.403, 'Regents' , 5.357],
 
 		//Iowa Conference
-    //['Coe College', 25.611, 25.687, 'Iowa Conference' , 7.907],
-    ['University of Dubuque', 10.644, 11.466, 'Iowa Conference' , 2.122],
-    ['Loras College', 5.452, 5.517, 'Iowa Conference' , 2.208],
-    ['Buena Vista University', 3.47, 3.825, 'Iowa Conference' , 1.018],
-    ['Wartburg College', 7.365, 9.459, 'Iowa Conference' , 3.029],
-    ['Luther College', 10.097, 10.203, 'Iowa Conference' , 4.478],
-    ['Simpson College', 7.845, 11.364, 'Iowa Conference' , 2.015],
+    ['Coe College', 1.675, 17.738, 'Iowa Conference' , 7.607],
+    ['University of Dubuque', 1.582, 10.480, 'Iowa Conference' , 4.509],
+    //['Loras College', 2.862, 61.556, 'Iowa Conference' , 24.944],
+    ['Buena Vista University', 2.172, 7.202, 'Iowa Conference' , 3.301],
+    //['Wartburg College', 7.679, 49.374, 'Iowa Conference' , 10.229],
+    ['Luther College', 3.998, 10.879, 'Iowa Conference' , 5.159],
+    ['Simpson College', 3.988, 7.697, 'Iowa Conference' , 2.351],
+    ['Nebraska Wesleyan', 3.987, 12.580, 'Iowa Conference' , 1.690],
+
 
 		//Benchmarks
-    ['Albion College', 9.608, 9.817, 'Benchmark' , 1.035],
-    //['Beloit College', 19.967, 83.755, 'Benchmark' , 20.636],
-    ['Bethel University', 1.728, 2.564, 'Benchmark' , 0.453],
-    ['Gustavus Adolphus College', 5.554, 5.786, 'Benchmark' , 1.873],
-    ['Hope College', 7.023, 7.194, 'Benchmark' , 2.237],
-    ['Monmouth College', 4.373, 4.454, 'Benchmark' , 1.496],
-    ['Ripon College', 12.528, 12.617, 'Benchmark' , 4.672],
-    ['William Jewell College', 10.525, 13.825, 'Benchmark' , 2.484],
+    ['Albion College', 4.573, 9.501, 'Benchmark' , 3.541],
+    //['Beloit College', 22.765, 46.301, 'Benchmark' , 18.011],
+    ['Bethel University', 1.577, 4.690, 'Benchmark' , 0.693],
+    ['Gustavus Adolphus College', 2.773, 13.390, 'Benchmark' , 6.3],
+    ['Hope College', 3.070, 8.461, 'Benchmark' , 2.654],
+    ['Monmouth College', 1.890, 4.286, 'Benchmark' , .930],
+    ['Ripon College', 1.894, 23.994, 'Benchmark' , 13.732],
+    ['William Jewell College', 4.187, 7.576, 'Benchmark' , .991],
     ['Wittenberg University', 7.172, 7.259, 'Benchmark' , 3.211],
-    ['St. Olaf College', 7.319, 7.484, 'Benchmark' , 3.539],
-    ['Central College', 3.974, 3.974, 'Central College' , 0.707],
+    ['St. Olaf College', 2.773, 4.259, 'Benchmark' , 1.271],
 
 		//['Central College', .793, 2.164, 'Central College' , .583],
-		['Central College', 3.974, 3.974, 'Central College' , 0.707],
+		['Central College', 1.863, 2.796, 'Central College' , 0.614],
 		]);
 
 		var options3 = {
@@ -222,13 +224,14 @@
 	</style>
   </head>
 	<body>
-    	<h1>January 2016 pagespeed benchmarks</h1>
-    	<p>Note: The following schools are excluded from these charts because they skew the charts in a way that make them difficult to read.</p>
+    	<h1>June 2017 pagespeed benchmarks</h1>
+    	<p>Note: The following schools are excluded from some of these charts because they skew the charts in a way that make them difficult to read.</p>
     	<ul>
     		<li>Beloit College</li>
-    		<li>Coe College</li>
-    		<li>University of Northern Iowa</li>
+    		<li>Loras College</li>
+    		<li>Wartburg College</li>
     	</ul>
+      <p>Scores that are lower and to the left are better.</p>
         <div id="series_chart_div" style="border: 1px solid #000;"></div>
         <div id="series_chart_div1" style="border: 1px solid #000;"></div>
         <div class="clearBoth"></div>
@@ -258,11 +261,5 @@
         <a href="http://www.webpagetest.org/result/151202_SH_15DV">Wittenberg University</a><br />
         <a href="http://www.webpagetest.org/result/151202_AG_15ED">St. Olaf College</a><br /></p>!--->
 
-        <h2>Previous tests</h2>
-		<ul>
-        	<li><a href="october.html">October 2015</a></li>
-          <li><a href="november.html">November 2015</a></li>
-          <li><a href="december.html">December 2015</a></li>
-		</ul>
 	</body>
 </html>
